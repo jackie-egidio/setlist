@@ -1,94 +1,90 @@
 {
-    "setList": [
-        {
-            "title":"All of Me",
-            "artist":"John Legend",
-            "genre": {
-                "mainGenre":"R and B",
-                "subgenre":"Soul"
-            },
-            "yearReleased":2013
-        },
-        {
-            "title":"Adore You",
-            "artist":"Harry Styles",
-            "genre": {
-                "mainGenre":"Pop Rock",
-                "subgenre":["Funk","Disco"]
-            },
-            "yearReleased":2019
-        },
-        {
-            "title":"Rewrite the Stars",
-            "artist":"Zac Efron and Zendaya",
-            "genre": {
-                "mainGenre":"Musical Theatre",
-                "subgenre":"Pop"
-            },
-            "yearReleased":2018
-        },
-        {
-            "title":"The Bones",
-            "artist":"Maren Morris",
-            "genre": {
-                "mainGenre":"Pop",
-                "subgenre":"Country"
-            },
-            "yearReleased":2019
-        },
-        {
-            "title":"Love Story",
-            "artist":"Taylor Swift",
-            "genre": {
-                "mainGenre":"Country",
-                "subgenre":"Pop"
-            },
-            "yearReleased":2008
-        },
-        {
-            "title":"Just the Way You Are",
-            "artist":"Bruno Mars",
-            "genre": {
-                "mainGenre":"Pop",
-                "subgenre":["R and B", "Soft Rock"]
-            },
-            "yearReleased":2010
-        },
-        {
-            "title":"She Will Be Loved",
-            "artist":"Maroon 5",
-            "genre": {
-                "mainGenre":"Alternative Rock",
-                "subgenre":["Pop Rock", "Soft Rock"]
-            },
-            "yearReleased":2004
-        },
-        {
-            "title":"A Thousand Years",
-            "artist":"Christina Perri",
-            "genre": {
-                "mainGenre":"R and B",
-                "subgenre":"Soul"
-            },
-            "yearReleased":2011
-        },
-        {
-            "title":"I'm Yours",
-            "artist":"Jason Mraz",
-            "genre": {
-                "mainGenre":"Reggae",
-                "subgenre":["Folk Pop", "Soft Rock"]
-            },
-            "yearReleased":2008
-        },
-        {
-            "title":"Perfect",
-            "artist":"Ed Sheeran",
-            "genre": {
-                "mainGenre":"Pop",
-                "subgenre":"Latin Ballad"
-            },
-            "yearReleased":2017
-        }
-    ]
+    "title":"All of Me",
+    "artist":"John Legend",
+    "genre": {
+        "mainGenre":"R and B",
+        "subgenre":"Soul"
+    },
+    "yearReleased":2013
+}
+{
+    "title":"Adore You",
+    "artist":"Harry Styles",
+    "genre": {
+        "mainGenre":"Pop Rock",
+        "subgenre":["Funk","Disco"]
+    },
+    "yearReleased":2019
+}
+{
+    "title":"Rewrite the Stars",
+    "artist":"Zac Efron and Zendaya",
+    "genre": {
+        "mainGenre":"Musical Theatre",
+        "subgenre":"Pop"
+    },
+    "yearReleased":2018
+}
+{
+    "title":"The Bones",
+    "artist":"Maren Morris",
+    "genre": {
+        "mainGenre":"Pop",
+        "subgenre":"Country"
+    },
+    "yearReleased":2019
+}
+{
+    "title":"Love Story",
+    "artist":"Taylor Swift",
+    "genre": {
+        "mainGenre":"Country",
+        "subgenre":"Pop"
+    },
+    "yearReleased":2008
+}
+{
+    "title":"Just the Way You Are",
+    "artist":"Bruno Mars",
+    "genre": {
+        "mainGenre":"Pop",
+        "subgenre":["R and B", "Soft Rock"]
+    },
+    "yearReleased":2010
+}
+{
+    "title":"She Will Be Loved",
+    "artist":"Maroon 5",
+    "genre": {
+        "mainGenre":"Alternative Rock",
+        "subgenre":["Pop Rock", "Soft Rock"]
+    },
+    "yearReleased":2004
+}
+{
+    "title":"A Thousand Years",
+    "artist":"Christina Perri",
+    "genre": {
+        "mainGenre":"R and B",
+        "subgenre":"Soul"
+    },
+    "yearReleased":2011
+}
+{
+    "title":"I'm Yours",
+    "artist":"Jason Mraz",
+    "genre": {
+        "mainGenre":"Reggae",
+        "subgenre":["Folk Pop", "Soft Rock"]
+    },
+    "yearReleased":2008
+}
+{
+    "title":"Perfect",
+    "artist":"Ed Sheeran",
+    "genre": {
+        "mainGenre":"Pop",
+        "subgenre":"Latin Ballad"
+    },
+    "yearReleased":2017
 }
