@@ -102,12 +102,11 @@
 
             // jQuery access
             $(document).ready(function() {
-                document.write("in jQuery");
                 $.getJSON( {
                     url: 'setlist.json'
                 }).done(function (result, status, xhr) {
-                    document.write("in jQuery");
                     var div = document.getElementById('results');
+                    div.innerHTML += data.length;
 
                     for (var i = 0; i < data.length; i++) {
                         div.innerHTML += data[i];
