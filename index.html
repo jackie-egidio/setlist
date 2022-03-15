@@ -106,19 +106,15 @@
                 $.getJSON( {
                     url: 'setlist.json'
                 }).done(function (result, status, xhr) {
-                    alert(result)
+                    document.write("in jQuery");
+                    var div = document.getElementById('results');
+
+                    for (var i = 0; i < data.length; i++) {
+                        div.innerHTML += data[i];
+                    }
                 }).fail(function (xhr, status, error) {
                     alert("Result: " + status + " " + error) + " " + xhr.st
                 })
-                
-                // function(data) {
-                //     document.write("in jQuery");
-                //     var div = document.getElementById('results');
-
-                //     for (var i = 0; i < data.length; i++) {
-                //         div.innerHTML += data[i];
-                //     }
-                // })
             });
 
             // stringify 
