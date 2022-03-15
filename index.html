@@ -106,11 +106,11 @@
                     url: 'setlist.json'
                 }).done(function (result, status, xhr) {
                     var div = document.getElementById('results');
-                    document.write(data.length);
-                    div.innerHTML += data.length;
+                    document.write(result.length);
+                    div.innerHTML += result.length;
 
-                    for (var i = 0; i < data.length; i++) {
-                        div.innerHTML += data[i];
+                    for (var i = 0; i < result.length; i++) {
+                        div.innerHTML += result[i];
                     }
                 }).fail(function (xhr, status, error) {
                     alert("Result: " + status + " " + error) + " " + xhr.st
