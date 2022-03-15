@@ -7,11 +7,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             // function to print only JSON objects with the desired genre
-            function sort(desiredGenre) {
+            function sort() {
                 $.getJSON( {
                     url: 'setlist.json'
                 }).done(function (result, status, xhr) {
+                    var select = document.getElementById('pickGenre');
+                    var desiredGenre = select.options[select.selectedIndex].value;
                     document.write(desiredGenre);
+
                     var div = document.getElementById('results');
                     var hasGenre = false;
                     for (var i = 0; i < resultArr.length; i++) {
@@ -61,7 +64,7 @@
     </head>
     <body>
         <div id="results"></div>
-        <form>
+        <form id="pickGenre">
             <label for="genre">Pick a genre</label>
             <select name="genre" id="genre">
                 <option value="r&b">R and B</option>
@@ -74,7 +77,7 @@
                 <option value="softRock">Soft Rock</option>
                 <option value="altRock">Alternative Rock</option>
             </select>
-            <input type="submit" value="Submit" onclick="sort(this.value)" />
+            <input type="submit" value="Submit" onclick="sort()" />
         </form>
     </body>
 </html>
