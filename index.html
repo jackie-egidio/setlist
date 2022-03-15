@@ -11,7 +11,7 @@
                 $.getJSON( {
                     url: 'setlist.json'
                 }).done(function (result, status, xhr) {
-                    var div = document.getElementById('results');
+                    var div = document.getElementById('results').innerHTML = "";
                     // parse JSON into string
                     var strSetList = JSON.stringify(result);
                     
