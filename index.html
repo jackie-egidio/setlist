@@ -13,7 +13,6 @@
                 }).done(function (result, status, xhr) {
                     var select = document.getElementById('genre');
                     var desiredGenre = select.options[select.selectedIndex].value;
-                    document.write(desiredGenre);
 
                     // put result into string
                     var strSetList = JSON.stringify(result);
