@@ -15,6 +15,12 @@
                     var desiredGenre = select.options[select.selectedIndex].value;
                     document.write(desiredGenre);
 
+                    // put result into string
+                    var strSetList = JSON.stringify(result);
+                    
+                    // parse JSON into string
+                    var resultArr = JSON.parse(strSetList);
+
                     var div = document.getElementById('results');
                     var hasGenre = false;
                     for (var i = 0; i < resultArr.length; i++) {
