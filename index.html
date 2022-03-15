@@ -13,14 +13,9 @@
                 }).done(function (result, status, xhr) {
                     var div = document.getElementById('results');
                     // parse JSON into string
-                    result = JSON.parse(result);
+                    var strSetList = JSON.stringify(result);
                     
-                    document.write(result.length);
-                    div.innerHTML += result.length;
-
-                    for (var i = 0; i < result.length; i++) {
-                        div.innerHTML += result[i];
-                    }
+                    document.write(strSetList);
                 }).fail(function (xhr, status, error) {
                     alert("Result: " + status + " " + error) + " " + xhr.st
                 })
