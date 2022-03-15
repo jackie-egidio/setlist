@@ -11,7 +11,7 @@
                 $.getJSON( {
                     url: 'setlist.json'
                 }).done(function (result, status, xhr) {
-                    var select = document.getElementById('pickGenre');
+                    var select = document.getElementById('genre');
                     var desiredGenre = select.options[select.selectedIndex].value;
                     document.write(desiredGenre);
 
@@ -64,7 +64,7 @@
     </head>
     <body>
         <div id="results"></div>
-        <form id="pickGenre">
+        <form>
             <label for="genre">Pick a genre</label>
             <select name="genre" id="genre">
                 <option value="r&b">R and B</option>
