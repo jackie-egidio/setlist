@@ -8,6 +8,7 @@
         <script>
             // function to print only JSON objects with the desired genre
             function sort(desiredGenre) {
+                var div = document.getElementById('results');
                 var hasGenre = false;
                 for (var i = 0; i < resultArr.length; i++) {
                     for (var j = 0; j < resultArr[i].genre.length; j++) {
