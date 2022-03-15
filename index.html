@@ -6,6 +6,8 @@
         <script src="setlist.json" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
+            // function()
+
             // jQuery access
             $(document).ready(function() {
                 $.getJSON( {
@@ -20,6 +22,7 @@
                     var resultArr = JSON.parse(result);
 
                     console.log(resultArr);
+                    console.log(resultArr[0]);
                     div.innerHTML += resultArr;
                     div.innerHTML += JSON.stringify(resultArr, undefined, 6);
 
