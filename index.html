@@ -8,11 +8,13 @@
         <script>
             function sort(desiredGenre) {
                 for (var i = 0; i < resultArr.length; i++) {
-                    div.innerHTML += resultArr[i].title + "<br />" + resultArr[i].artist + "<br />";
-                    for (var j = 0; j < resultArr[i].genre.length; j++) {
-                        div.innerHTML += resultArr[i].genre.mainGenre + "<br />" + resultArr[i].genre.subGenre + "<br />";
+                    if (resultArr[i].mainGenre === desiredGenre || resultArr[i].subGenre === desiredGenre) {
+                        div.innerHTML += resultArr[i].title + "<br />" + resultArr[i].artist + "<br />";
+                        for (var j = 0; j < resultArr[i].genre.length; j++) {
+                            div.innerHTML += resultArr[i].genre.mainGenre + "<br />" + resultArr[i].genre.subGenre + "<br />";
+                        }
+                        div.innerHTML += resultArr[i].yearReleased + "<br /><br />";
                     }
-                    div.innerHTML += resultArr[i].yearReleased + "<br /><br />";
                 }
             }
 
