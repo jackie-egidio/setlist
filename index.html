@@ -11,7 +11,7 @@
                     if (resultArr[i].mainGenre === desiredGenre || resultArr[i].subGenre === desiredGenre) {
                         div.innerHTML += resultArr[i].title + "<br />" + resultArr[i].artist + "<br />";
                         for (var j = 0; j < resultArr[i].genre.length; j++) {
-                            div.innerHTML += resultArr[i].genre.mainGenre + "<br />" + resultArr[i].genre.subGenre + "<br />";
+                            div.innerHTML += resultArr[i].genre[j] + "<br />";
                         }
                         div.innerHTML += resultArr[i].yearReleased + "<br /><br />";
                     }
@@ -35,7 +35,7 @@
                         div.innerHTML += resultArr[i].title + "<br />" + resultArr[i].artist + "<br />";
                         div.innerHTML += resultArr[i].genre.length;
                         for (var j = 0; j < resultArr[i].genre.length; j++) {
-                            div.innerHTML += resultArr[i].genre.mainGenre + "<br />" + resultArr[i].genre.subGenre + "<br />";
+                            div.innerHTML += resultArr[i].genre[j] + "<br />";
                         }
                         div.innerHTML += resultArr[i].yearReleased + "<br /><br />";
                     }
