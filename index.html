@@ -6,8 +6,14 @@
         <script src="setlist.json" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-            function sort() {
-
+            function sort(desiredGenre) {
+                for (var i = 0; i < resultArr.length; i++) {
+                    div.innerHTML += resultArr[i].title + "<br />" + resultArr[i].artist + "<br />";
+                    for (var j = 0; j < resultArr[i].genre.length; j++) {
+                        div.innerHTML += resultArr[i].genre.mainGenre + "<br />" + resultArr[i].genre.subGenre + "<br />";
+                    }
+                    div.innerHTML += resultArr[i].yearReleased + "<br /><br />";
+                }
             }
 
             // jQuery access
@@ -50,6 +56,7 @@
                 <option value="funk">Funk</option>
                 <option value="softRock">Soft Rock</option>
             </select>
+            <input type="submit" value="Submit" onclick="sort(this.value)" />
         </form>
     </body>
 </html>
