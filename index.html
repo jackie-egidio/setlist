@@ -12,12 +12,21 @@
                     url: 'setlist.json'
                 }).done(function (result, status, xhr) {
                     var div = document.getElementById('results');
-                    // parse JSON into string
-                    
-                    var resultArr = JSON.parse(result);
-                    console.log(resultArr[0].title);
-                    
+
+                    // put result into string
                     var strSetList = JSON.stringify(result.title);
+                    
+                    // parse JSON into string
+                    var resultArr = JSON.parse(strSetList);
+                    console.log(resultArr[0].title);
+
+                    for (var i = 0; i < resultArr.length; i++) {
+                        div.innerHTML += resultArr[i].title + "<br />" + resultArr[i].artist + "<br />";
+                        for (var j = 0; j < resultArr[i].genre.length; j++) {
+                            div.innerHTML += resultArr[i].genre.mainGenre + "<br />" + resultArr[i].genre.subGenre + "<br />";
+                        }
+                        div.innerHTML += resultArr[i].yearReleased + "<br /><br />";
+                    }
                     
                     div.innerHTML += "<br />" + (strSetList);
                 }).fail(function (xhr, status, error) {
