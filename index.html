@@ -11,6 +11,7 @@
                 $.getJSON( {
                     url: 'setlist.json'
                 }).done(function (result, status, xhr) {
+                    document.write(desiredGenre);
                     var div = document.getElementById('results');
                     var hasGenre = false;
                     for (var i = 0; i < resultArr.length; i++) {
