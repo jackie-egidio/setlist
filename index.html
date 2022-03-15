@@ -13,44 +13,13 @@
                 }).done(function (result, status, xhr) {
                     var div = document.getElementById('results');
                     // parse JSON into string
-                    var strSetList = JSON.stringify(result);
                     
-                    document.write(strSetList);
-                }).fail(function (xhr, status, error) {
-                    alert("Result: " + status + " " + error) + " " + xhr.st
-                })
-            });
-
-            // stringify 
-            // strSetList = JSON.stringify(setList);
-            // const result = document.getElementById('results');
-            // result.innerHTML = "";
-            // result.innerHTML += strSetList.length;
-
-            // style
-        </script>
-    </head>
-    <body>
-        <div id="results"></div>
-    </body>
-</html>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css">
-        <script src="setlist.json" type="text/javascript"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            // jQuery access
-            $(document).ready(function() {
-                $.getJSON( {
-                    url: 'setlist.json'
-                }).done(function (result, status, xhr) {
-                    var div = document.getElementById('results');
-                    // parse JSON into string
-                    
-                    
+                    var resultArr = JSON.parse(result);
+                    for (song in result) {
+                        if(result.hasOwnProperty(song)) {
+                            console.log("%c " + key + " = " + resultArr[key]);
+                        }
+                    }
                     
                     var strSetList = JSON.stringify(result.title);
                     
