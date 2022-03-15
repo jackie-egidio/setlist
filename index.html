@@ -106,6 +106,8 @@
                     url: 'setlist.json'
                 }).done(function (result, status, xhr) {
                     var div = document.getElementById('results');
+                    JSON.parse(result);
+                    
                     document.write(result.length);
                     div.innerHTML += result.length;
 
