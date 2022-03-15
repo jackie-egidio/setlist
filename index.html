@@ -14,10 +14,10 @@
                     var div = document.getElementById('results');
 
                     // put result into string
-                    var strSetList = JSON.stringify(result);
+                    // var strSetList = JSON.stringify(result);
                     
                     // parse JSON into string
-                    var resultArr = JSON.parse(strSetList);
+                    var resultArr = JSON.parse(result);
 
                     console.log(resultArr);
                     div.innerHTML += resultArr;
@@ -40,5 +40,18 @@
     </head>
     <body>
         <div id="results"></div>
+        <form>
+            <label for="genre">Pick a genre</label>
+            <select name="genre" id="genre">
+                <option value="r&b">R and B</option>
+                <option value="pop">Pop</option>
+                <option value="soul">Soul</option>
+                <option value="popRock">Pop Rock</option>
+                <option value="country">Country</option>
+                <option value="musicalTheatre">Musical Theatre</option>
+                <option value="funk">Funk</option>
+                <option value="softRock">Soft Rock</option>
+            </select>
+        </form>
     </body>
 </html>
