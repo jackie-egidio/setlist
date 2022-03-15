@@ -6,15 +6,20 @@
         <script src="setlist.json" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
+            // function to print only JSON objects with the desired genre
             function sort(desiredGenre) {
+                var hasGenre = false;
                 for (var i = 0; i < resultArr.length; i++) {
-                    if (resultArr[i].mainGenre === desiredGenre || resultArr[i].subGenre === desiredGenre) {
-                        div.innerHTML += resultArr[i].title + "<br />" + resultArr[i].artist + "<br />";
+                    for (var j = 0; j < resultArr[i].genre.length; j++) {
+                        if (desiredGenre.localeCompare(resultArr[i].genre[j]) == 0) hasGenre = true;
+                    }
+                    if (hasGenre) {
+                        div.innerHTML += resultArr[i].title + "<br />Artist: " + resultArr[i].artist + "<br />Genre(s): ";
                         for (var j = 0; j < resultArr[i].genre.length; j++) {
                             if (j != resultArr[i].genre.length - 1) div.innerHTML += resultArr[i].genre[j] + ", ";
                             else div.innerHTML += resultArr[i].genre[j];
                         }
-                        div.innerHTML += resultArr[i].yearReleased + "<br /><br />";
+                        div.innerHTML += "<br />Released " + resultArr[i].yearReleased + "<br /><br />";
                     }
                 }
             }
