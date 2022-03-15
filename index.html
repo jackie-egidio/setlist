@@ -15,19 +15,11 @@
                     // parse JSON into string
                     var strSetList = JSON.stringify(result);
                     
-                    document.write(strSetList);
+                    div.innerHTML += strSetList;
                 }).fail(function (xhr, status, error) {
                     alert("Result: " + status + " " + error) + " " + xhr.st
                 })
             });
-
-            // stringify 
-            // strSetList = JSON.stringify(setList);
-            // const result = document.getElementById('results');
-            // result.innerHTML = "";
-            // result.innerHTML += strSetList.length;
-
-            // style
         </script>
     </head>
     <body>
