@@ -41,31 +41,34 @@
             }
 
             // jQuery access
-            $.getJSON( {
-                url: 'setlist.json'
-            }).done(function (result, status, xhr) {
-                var div = document.getElementById('results');
+            function printJSON() {
+                $.getJSON( {
+                    url: 'setlist.json'
+                }).done(function (result, status, xhr) {
+                    var div = document.getElementById('results');
 
-                // put result into string
-                var strSetList = JSON.stringify(result);
-                
-                // parse JSON into string
-                var resultArr = JSON.parse(strSetList);
+                    // put result into string
+                    var strSetList = JSON.stringify(result);
 
-                for (var i = 0; i < resultArr.length; i++) {
-                    div.innerHTML += resultArr[i].title + "<br />Artist: " + resultArr[i].artist + "<br />Genre(s): ";
-                    for (var j = 0; j < resultArr[i].genre.length; j++) {
-                        if (j != resultArr[i].genre.length - 1) div.innerHTML += resultArr[i].genre[j] + ", ";
-                        else div.innerHTML += resultArr[i].genre[j];
+                    // parse JSON into string
+                    var resultArr = JSON.parse(strSetList);
+
+                    for (var i = 0; i < resultArr.length; i++) {
+                        div.innerHTML += resultArr[i].title + "<br />Artist: " + resultArr[i].artist + "<br />Genre(s): ";
+                        for (var j = 0; j < resultArr[i].genre.length; j++) {
+                            if (j != resultArr[i].genre.length - 1) div.innerHTML += resultArr[i].genre[j] + ", ";
+                            else div.innerHTML += resultArr[i].genre[j];
+                        }
+                        div.innerHTML += "<br />Released " + resultArr[i].yearReleased + "<br /><br />";
                     }
-                    div.innerHTML += "<br />Released " + resultArr[i].yearReleased + "<br /><br />";
-                }
-                }).fail(function (xhr, status, error) {
-                alert("Result: " + status + " " + error) + " " + xhr.st
-            });
+                    }).fail(function (xhr, status, error) {
+                    alert("Result: " + status + " " + error) + " " + xhr.st
+                });
+            }
+            
         </script>
     </head>
-    <body>
+    <body onload="printJSON();">
         <div id="results"></div>
         <form>
             <label for="genre">Pick a genre</label>
