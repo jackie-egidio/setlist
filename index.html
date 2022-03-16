@@ -20,7 +20,7 @@
                     // parse JSON into string
                     var resultArr = JSON.parse(strSetList);
 
-                    var div = document.getElementById('sorted');
+                    var div = document.getElementById('sorted').innerHTML = "";
                     var hasGenre = false;
                     for (var i = 0; i < resultArr.length; i++) {
                         hasGenre = false;
@@ -28,7 +28,7 @@
                             if (desiredGenre.localeCompare(resultArr[i].genre[j]) == 0) hasGenre = true;
                         }
                         if (hasGenre) {
-                            div.innerHTML = resultArr[i].title + "<br />Artist: " + resultArr[i].artist + "<br />Genre(s): ";
+                            div.innerHTML += resultArr[i].title + "<br />Artist: " + resultArr[i].artist + "<br />Genre(s): ";
                             for (var j = 0; j < resultArr[i].genre.length; j++) {
                                 if (j != resultArr[i].genre.length - 1) div.innerHTML += resultArr[i].genre[j] + ", ";
                                 else div.innerHTML += resultArr[i].genre[j];
